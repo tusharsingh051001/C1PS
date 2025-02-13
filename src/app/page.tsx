@@ -59,18 +59,18 @@ export default function Home() {
     <Link href="/shop" className="mx-8 hover:text-gray-900 text-2xl">Shop</Link>
   </nav>
 
-  <Link
-    href="/"
-    className="flex order-first lg:order-none title-font font-medium items-center justify-center text-gray-900"
-  >
-<Image 
-  src="/logo/image.png" 
-  alt="Logo" 
-  width={200} 
-  height={70} 
-  className="object-cover" 
-/>
-  </Link>
+<Link
+  href="/"
+  className="relative flex order-first lg:order-none title-font font-medium items-center justify-center text-gray-900"
+  style={{ width: '200px', height: '70px' }}
+>
+  <Image 
+    src="/logo/image.png" 
+    alt="Logo" 
+    fill
+    className="object-cover" 
+  />
+</Link>
 
   <div className="inline-flex flex-nowrap items-center justify-center">
     <nav className="flex flex-nowrap items-center justify-center text-base">
