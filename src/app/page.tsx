@@ -43,7 +43,7 @@ export default function Home() {
   return (
 <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 font-[family-name:var(--font-geist-sans)]">
 <header className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">
-  <div className="w-full flex flex-wrap p-3 flex-col md:flex-row items-center justify-end font-bloverly" style={{ backgroundColor: "#771214" }}>
+  <div className="w-full flex flex-wrap p-3 flex-col md:flex-row items-center justify-end font-bloverly" style={{ backgroundColor: "#4a0600" }}>
   <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
     Button
     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@ export default function Home() {
 <div className="container mx-auto flex flex-nowrap items-center justify-center p-3 font-bloverly gap-x-60">
   <nav className="flex flex-nowrap items-center justify-center text-base">
     <Link href="/" className="mx-8 hover:text-gray-900 text-2xl">Home</Link>
-    <Link href="/about" className="mx-8 hover:text-gray-900 text-2xl">About Us</Link>
+    <Link href="/about" className="mx-8 hover:text-gray-900 text-2xl whitespace-nowrap">About Us</Link>
     <Link href="/shop" className="mx-8 hover:text-gray-900 text-2xl">Shop</Link>
   </nav>
 
@@ -77,7 +77,7 @@ export default function Home() {
       <Link href="/collections" className="mx-8 hover:text-gray-900 text-2xl">
         Collections
       </Link>
-      <Link href="/contact" className="mx-8 hover:text-gray-900 text-2xl">
+      <Link href="/contact" className="mx-8 hover:text-gray-900 text-2xl whitespace-nowrap">
         Contact Us
       </Link>
     </nav>
@@ -101,7 +101,7 @@ export default function Home() {
     ))}
 
     {/* View All Button */}
-    <div className="absolute bottom-10 right-10 bg-[#133630] text-white text-2xl px-7 py-5 rounded-xl font-cormorant">
+    <div className="absolute bottom-10 right-10 bg-[#052715] text-white text-2xl px-7 py-5 rounded-xl font-cormorant">
       View All Collections
     </div>
   </div>
@@ -130,7 +130,7 @@ export default function Home() {
       ))}
 
   {/* View All Button */}
-  <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-[#133630] text-white px-7 py-4 rounded-lg font-cormorant text-xl font-cormorant">
+  <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 bg-[#052715] text-white px-7 py-4 rounded-lg font-cormorant text-xl font-cormorant">
     View All
   </div>
   </div>
@@ -183,7 +183,7 @@ export default function Home() {
     <br />
     Explore the perfect balance of the past and the future, with jewelry that transcends time and trends, designed to be cherished for generations.
   </p>
-  <button className="bg-[#133630] text-white py-2 px-6 rounded-md hover:bg-gray-800 transition font-cormorant">
+  <button className="bg-[#052715] text-white py-2 px-6 rounded-md hover:bg-gray-800 transition font-cormorant">
     BROWSE
   </button>
 </div>
@@ -216,54 +216,54 @@ export default function Home() {
     </div>
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-8 w-7/8 mx-auto">
         {/* Block 1 - Large Header Block */}
-        <div className="bg-[#771214] text-white p-10 md:p-16 flex items-center justify-center text-center md:col-span-1 col-span-2 rounded-lg">
+        <div className="bg-[#4a0600] text-white p-10 md:p-16 flex items-center justify-center text-center md:col-span-1 col-span-2 rounded-lg">
           <h2 className="text-4xl font-light font-cormorant">Sriyama</h2>
         </div>
 
         {/* Block 2 - Quote Block */}
-        <div className="bg-[#771214] text-white p-6 md:p-10 flex items-center justify-center text-center rounded-lg shadow-lg">
+        <div className="bg-[#4a0600] text-white p-6 md:p-10 flex items-center justify-center text-center rounded-lg shadow-lg">
           <p className="text-lg font-cormorant">
           &quot;Embrace timeless elegance with our exclusive collection.&quot;
           </p>
         </div>
 
         {/* Block 3 - Tall Centerpiece Block */}
-        <div className="bg-[#771214] text-white p-8 flex items-center justify-center text-center md:row-span-2 min-h-[15rem] md:h-auto rounded-lg">
+        <div className="bg-[#4a0600] text-white p-8 flex items-center justify-center text-center md:row-span-2 min-h-[15rem] md:h-auto rounded-lg">
           <h2 className="text-3xl font-light font-cormorant">
           &quot;Cum culpa iure minima doloremque nam natus assumenda error alias aliquid saepe.&quot;
           </h2>
         </div>
 
         {/* Block 4 - Additional Tall Centerpiece Block */}
-        <div className="bg-[#771214] text-white p-8 flex items-center justify-center text-center md:row-span-2 min-h-[15rem] md:h-auto rounded-lg">
+        <div className="bg-[#4a0600] text-white p-8 flex items-center justify-center text-center md:row-span-2 min-h-[15rem] md:h-auto rounded-lg">
           <h2 className="text-3xl font-light font-cormorant">
           &quot;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, ut illum.&quot;
           </h2>
         </div>
 
         {/* Block 5 - Minimalist Quote Block */}
-        <div className="bg-[#771214] text-white p-4 md:p-8 flex items-center justify-center text-center rounded-lg min-h-[15rem] ">
+        <div className="bg-[#4a0600] text-white p-4 md:p-8 flex items-center justify-center text-center rounded-lg min-h-[15rem] ">
           <h2 className="text-2xl font-light font-cormorant">
           &quot;Indulge in luxurious handcrafted jewelry designed for special moments.&quot;
           </h2>
         </div>
 
         {/* Block 6 - Newly Added Middle Block */}
-        <div className="bg-[#771214] text-white p-6 md:p-12 flex items-center justify-center text-center rounded-lg shadow-md col-span-2 md:col-span-3">
+        <div className="bg-[#4a0600] text-white p-6 md:p-12 flex items-center justify-center text-center rounded-lg shadow-md col-span-2 md:col-span-3">
           <p className="text-xl font-medium font-cormorant">
           &quot;Discover unique craftsmanship where tradition meets modern artistry.&quot;
           </p>
         </div>
 
         {/* Block 7 - Wide Featured Text Block */}
-        <div className="bg-[#771214] text-white p-12 flex items-center justify-center text-center md:col-span-2 rounded-lg">
+        <div className="bg-[#4a0600] text-white p-12 flex items-center justify-center text-center md:col-span-2 rounded-lg">
           <h2 className="text-3xl font-cormorant">
             Weddings Style Lorem Ipsum Eveniet iste beatae minus omnis dolor recusandae.
           </h2>
         </div>
 
         {/* Block 8 - Square Decorative Block */}
-        <div className="bg-[#771214] text-white p-6 flex items-center justify-center text-center rounded-lg shadow-lg">
+        <div className="bg-[#4a0600] text-white p-6 flex items-center justify-center text-center rounded-lg shadow-lg">
           <p className="text-lg font-cormorant">
           &quot;Indulge in luxurious handcrafted jewelry designed for special moments.&quot;
           </p>
@@ -357,7 +357,7 @@ export default function Home() {
     </div>
   </div>
 </div>
-  <div className="bg-[#771214] w-full py-4">
+  <div className="bg-[#4a0600] w-full py-4">
   <div className="container mx-auto flex flex-wrap items-center justify-between px-6">
   
     {/* Left Side - Text */}
