@@ -13,8 +13,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        snell: ["'Snell Roundhand'"],
-        cormorant: ["'Cormorant Garamond'"],
+        snell: ["Snell Roundhand"],
+        cormorant: ["Cormorant Garamond"],
         bloverly: ["Bloverly"],
       },
       fontSize: {
