@@ -13,9 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        snell: ["Snell Roundhand"],
-        cormorant: ["Cormorant Garamond"],
-        bloverly: ["Bloverly"],
+        snell: ["'Snell Roundhand'", "cursive"],
+        cormorant: ["'Cormorant Garamond'", "serif"],
+        bloverly: ["'Bloverly'", "sans-serif"],
       },
       fontSize: {
         '5xl':'5rem',
