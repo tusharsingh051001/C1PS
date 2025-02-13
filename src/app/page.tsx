@@ -52,36 +52,33 @@ export default function Home() {
   </button>
 </div>
 
-<div className="container mx-auto flex flex-nowrap items-center justify-center p-3 font-bloverly gap-x-60">
-  <nav className="flex flex-nowrap items-center justify-center text-base">
-    <Link href="/" className="mx-8 hover:text-gray-900 text-2xl">Home</Link>
-    <Link href="/about" className="mx-8 hover:text-gray-900 text-2xl whitespace-nowrap">About Us</Link>
-    <Link href="/shop" className="mx-8 hover:text-gray-900 text-2xl">Shop</Link>
+<div className="container mx-auto flex items-center justify-between p-3 font-bloverly">
+  {/* Left Navigation */}
+  <nav className="flex items-center space-x-12">
+    <Link href="/" className="hover:text-gray-900 text-2xl">Home</Link>
+    <Link href="/about" className="hover:text-gray-900 text-2xl">About Us</Link>
+    <Link href="/shop" className="hover:text-gray-900 text-2xl">Shop</Link>
   </nav>
 
-<Link
-  href="/"
-  className="relative flex order-first lg:order-none title-font font-medium items-center justify-center text-gray-900"
-  style={{ width: '200px', height: '70px' }}
->
-  <Image 
-    src="/logo/image.png" 
-    alt="Logo" 
-    fill
-    className="object-cover" 
-  />
-</Link>
+  {/* Logo (Centered) */}
+  <Link href="/" className="flex justify-center">
+    <div className="relative w-48 h-16">
+      <Image 
+        src="/logo/image.png"
+        alt="Logo"
+        layout="intrinsic"
+        width={200}
+        height={70}
+        className="object-contain"
+      />
+    </div>
+  </Link>
 
-  <div className="inline-flex flex-nowrap items-center justify-center">
-    <nav className="flex flex-nowrap items-center justify-center text-base">
-      <Link href="/collections" className="mx-8 hover:text-gray-900 text-2xl">
-        Collections
-      </Link>
-      <Link href="/contact" className="mx-8 hover:text-gray-900 text-2xl whitespace-nowrap">
-        Contact Us
-      </Link>
-    </nav>
-  </div>
+  {/* Right Navigation */}
+  <nav className="flex items-center space-x-12">
+    <Link href="/collections" className="hover:text-gray-900 text-2xl">Collections</Link>
+    <Link href="/contact" className="hover:text-gray-900 text-2xl">Contact Us</Link>
+  </nav>
 </div>
 </header>
 
