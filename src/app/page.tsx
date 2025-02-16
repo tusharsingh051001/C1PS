@@ -107,8 +107,8 @@ export default function Home() {
 <div className="w-full h-screen flex items-center justify-center bg-white pt-8">
   <div className="relative w-full h-full bg-white flex items-center justify-center shadow-lg">
     {/* Watermark Background */}
-    <div className="absolute inset-0 flex items-center justify-center opacity-50 pointer-events-none font-snell">
-  <div className="text-gray-300 text-18xl font-bold tracking-widest whitespace-nowrap animate-scroll">
+    <div className="absolute flex items-center justify-center opacity-50 pointer-events-none font-snell">
+  <div className="text-gray-300 text-18xl font-bold tracking-widest animate-scroll pl-5">
     Srimaya
   </div>
 </div>
@@ -187,14 +187,11 @@ export default function Home() {
 
 </div>
 
-<div className="relative w-full bg-white overflow-hidden">
-<div className="text-black-500 bg-white text-3xl font-snell tracking-widest whitespace-nowrap animate-scroll">
+<div className="relative bg-white">
+<div className="text-black bg-white text-3xl font-snell tracking-widest whitespace-nowrap animate-scroll-2">
     Srimaya For the divine feminine in you...
   </div>
   </div>
-
-
-
 
   <div className="py-12 bg-gray-50 w-full">
     <div className="flex w-full">
@@ -270,30 +267,30 @@ export default function Home() {
 
 
   <style jsx>{`
-    @keyframes scroll-left-to-right {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(100%);
-      }
-    }
-
-    .animate-scroll-left {
-      animation: scroll-left-to-right 30s linear infinite;
-    }
-
     @keyframes scroll {
       0% {
         transform: translateX(-100%);
       }
       100% {
-        transform: translateX(100%);
+        transform: translateX(130%);
       }
     }
 
     .animate-scroll {
       animation: scroll 30s linear infinite;
+    }
+
+    @keyframes scroll2 {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(350%);
+      }
+    }
+
+    .animate-scroll-2 {
+      animation: scroll2 30s linear infinite;
     }
   `}</style>
 </section>
