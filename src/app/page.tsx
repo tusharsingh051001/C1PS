@@ -52,7 +52,7 @@ export default function Home() {
   </button>
 </div>
 
-<div className="container mx-auto flex items-center justify-between p-3 font-bloverly">
+<div className="container mx-auto flex items-center justify-between bg-white p-3 font-bloverly">
   {/* Left Navigation */}
   <nav className="flex items-center space-x-12">
     <Link href="/" className="hover:text-gray-900 text-2xl">Home</Link>
@@ -188,8 +188,8 @@ export default function Home() {
 </div>
 
 <div className="relative w-full overflow-hidden">
-<div className="text-black-500 text-3xl font-snell tracking-widest whitespace-nowrap animate-scroll">
-    Srimaya For the divine femin9ine in you...
+<div className="text-black-500 bg-white text-3xl font-snell tracking-widest whitespace-nowrap animate-scroll">
+    Srimaya For the divine feminine in you...
   </div>
   </div>
 
