@@ -41,7 +41,7 @@ export default function Home() {
 
 
   return (
-<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 font-[family-name:var(--font-geist-sans)]">
+<div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 bg-white font-[family-name:var(--font-geist-sans)]">
 <header className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">
   <div className="w-full flex flex-wrap p-3 flex-col md:flex-row items-center justify-end font-bloverly" style={{ backgroundColor: "#4a0600" }}>
   <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
@@ -187,7 +187,7 @@ export default function Home() {
 
 </div>
 
-<div className="relative w-full overflow-hidden">
+<div className="relative w-full bg-white overflow-hidden">
 <div className="text-black-500 bg-white text-3xl font-snell tracking-widest whitespace-nowrap animate-scroll">
     Srimaya For the divine feminine in you...
   </div>
@@ -300,7 +300,7 @@ export default function Home() {
 
 <br></br>
 
-<footer className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center border-t border-black">
+<footer className="text-gray-600 bg-white body-font w-full flex flex-wrap flex-col md:flex-row items-center border-t border-black">
 <div className="container mx-auto px-5 py-8 flex flex-wrap md:flex-nowrap items-center justify-between">
   <div className="w-[320px] h-[260px] flex items-center justify-center mb-4 md:mb-0">
     <a className="flex items-center justify-center">
