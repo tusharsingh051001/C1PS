@@ -170,16 +170,17 @@ export default function Home() {
     About Us
   </h2>
   <p className="text-black mb-7 font-cormorant text-2xl">
-    Timeless Elegance, Crafted for the Modern Woman:
-    <br />
-    Based out of New delhi, Srimaya celebrates the fusion of rich heritage and contemporary style. Our collection of jewelry is designed to captivate and empower the modern woman, blending traditional ethnic artistry with the sophistication of modern trends. Each piece is a masterpiece—handcrafted by skilled artisans using high-quality materials, with intricate detailing that echoes Indias vibrant culture and contemporary elegance.
-    <br />
-    From statement-making necklaces and earrings to delicately crafted bangles and rings, every piece in our collection is a reflection of timeless beauty and modern sensibility. Whether you are looking for the grandeur of traditional Indian designs or the sleek simplicity of minimalist modern jewelry, we offer a diverse range that complements every occasion and personal style.
-    <br />
-    At Srimaya, we believe that jewelry is not just an accessory, but a form of self-expression. Our creations are made for women who embrace both tradition and innovation, exuding confidence and grace with every wear.
-    <br />
-    Explore the perfect balance of the past and the future, with jewelry that transcends time and trends, designed to be cherished for generations.
-  </p>
+  Srimaya celebrates the fusion of rich heritage and contemporary style. Our collection of jewelry is designed to captivate and empower the modern woman, blending traditional ethnic artistry with the sophistication of modern trends. 
+<br/><br/>
+From statement-making necklaces and earrings to delicately crafted bangles and rings, every piece in our collection is a reflection of timeless beauty and modern sensibility. Whether you are looking for the grandeur of traditional Indian designs or the sleek simplicity of minimalist modern jewelry, we offer a diverse range that complements every occasion and personal style.
+<br/> <br/> 
+At Srimaya, we believe that jewellery is not just an accessory, but a form of self-expression. 
+<br/> 
+</p>
+<p className="text-black text-2xl italic font-snell font-bold">
+  Explore the perfect balance of the past and the future, with jewellery that transcends time and trends, designed to be cherished for generations...
+</p>
+  <br/>
   <button className="bg-[#052715] text-white py-2 px-6 rounded-md hover:bg-gray-800 transition font-cormorant">
     BROWSE
   </button>
@@ -188,8 +189,8 @@ export default function Home() {
 </div>
 
 <div className="relative bg-white">
-<div className="text-black bg-white text-3xl font-snell tracking-widest whitespace-nowrap animate-scroll-2">
-    Srimaya For the divine feminine in you...
+<div className="text-black bg-white text-4xl font-snell tracking-widest whitespace-nowrap animate-scroll-2">
+    For the divine feminine in you...
   </div>
   </div>
 

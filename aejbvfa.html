@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Comparison</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Patrick+Hand&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Snell+Roundhand&display=swap');
+
+        .font-snell { font-family: 'Snell Roundhand' }
+        .font-brush-script { font-family: 'Brush Script MT', cursive; }
+        .font-cormorant { font-family: 'Cormorant Garamond', serif; }
+        .font-garamond { font-family: 'Garamond', serif; }
+        .font-bloverly { font-family: 'Bloverly'}
+        .font-patrick { font-family: 'Patrick Hand', cursive; }
+
+        .font-ui-rounded { font-family: ui-rounded, cursive; }
+        .font-ui-sans { font-family: ui-sans, cursive; }
+        .font-ui-serif { font-family: ui-serif, cursive; }
+    </style>
+</head>
+<body class="bg-gray-100 p-10">
+    
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-6">Font Comparison: Original vs. Tailwind Alternative</h1>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Snell Roundhand vs. Brush Script</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-xl font-snell">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-gray-500 mt-2">Snell Roundhand (Original)</p>
+                </div>
+                <div>
+                    <p class="text-xl font-brush-script">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-gray-500 mt-2">Brush Script MT</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Cormorant Garamond vs. Garamond</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-xl font-cormorant">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-gray-500 mt-2">Cormorant Garamond (Original)</p>
+                </div>
+                <div>
+                    <p class="text-xl font-garamond">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-gray-500 mt-2">Garamond</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-8 p-6 bg-white rounded-lg shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Bloverly vs. Patrick Hand</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <p class="text-xl font-bloverly">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-gray-500 mt-2">Bloverly (Original)</p>
+                </div>
+                <div>
+                    <p class="text-xl font-ui-sans">The quick brown fox jumps over the lazy dog.</p>
+                    <p class="text-sm text-gray-500 mt-2">UI Sans</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -18,6 +18,7 @@ export default {
         bloverly: ["'Bloverly'", "sans-serif"],
       },
       fontSize: {
+        '4xl':'4rem',
         '5xl':'5rem',
         '6xl': '6rem', // 96px
         '10xl': '10rem', // 160px
