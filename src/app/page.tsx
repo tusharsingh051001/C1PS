@@ -44,12 +44,7 @@ export default function Home() {
 <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 bg-white font-[family-name:var(--font-geist-sans)]">
 <header className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">
   <div className="w-full flex flex-wrap p-3 flex-col md:flex-row items-center justify-end font-bloverly" style={{ backgroundColor: "#4a0600" }}>
-  <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-    Button
-    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-      <path d="M5 12h14M12 5l7 7-7 7"></path>
-    </svg>
-  </button>
+  <Link href="/login" className="hover:text-gray-900 text-2xl">Home</Link>
 </div>
 
 <div className="container mx-auto flex items-center justify-between bg-white p-3 font-bloverly">
