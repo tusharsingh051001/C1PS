@@ -156,7 +156,7 @@ export default function About() {
                       className="object-contain"
                     />
                   </div>
-                  <p className="text-3xl italic text-gray-700 font-semibold">
+                  <p className="text-3xl italic text-gray-700 font-snell font-semibold">
                     For the divine feminine in you....
                   </p>
                   <p className="mt-3 text-xl italic text-black-300 font-cormorant">
