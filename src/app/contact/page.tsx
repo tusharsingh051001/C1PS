@@ -180,7 +180,7 @@ export default function About() {
                   Contact Form
                 </h3>
                 <h2 className="mb-6 text-3xl font-semibold">
-                  Let &apos; s Start A Conversation
+                  Let&apos;s Start A Conversation
                 </h2>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-4">
