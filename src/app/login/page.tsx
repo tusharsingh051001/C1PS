@@ -1,6 +1,6 @@
 "use client" ;
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { loginUser, registerUser } from "../utils/api";
 import { useRouter } from "next/navigation";
 
@@ -10,10 +10,10 @@ export default function AuthPage() {
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState(""); // Only for Signup
   const [email, setEmail] = useState(""); // Only for Signup
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<string | null>(null);
   const router = useRouter();
 
-  const handleAuth = async (e) => {
+  const handleAuth = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(null);
 
@@ -26,9 +26,14 @@ export default function AuthPage() {
       }
 
       localStorage.setItem("token", res.jwt); // Store JWT token
-      router.push("/"); /
-    } catch (err) {
-      setError(err.message);
+      router.push("/"); 
+    } catch (err: unknown) {
+        if (err instanceof Error) {
+            setError(err.message);
+          } 
+          else {
+        setError("An unexpected error occurred");
+      }
     }
   };
 
