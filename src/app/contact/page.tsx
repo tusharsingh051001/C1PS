@@ -58,51 +58,97 @@ export default function About() {
       )}
 
       {/* Header */}
-      <header>
-        {/* Top Bar */}
-        <div className="bg-[#4a0600] p-3 flex justify-end">
-          <Link href="/login" className="text-2xl text-white hover:text-gray-300">
-            Home
-          </Link>
-        </div>
-        {/* Main Navigation */}
-        <div className="container mx-auto flex items-center justify-between bg-white p-3 font-bloverly">
-          {/* Left Navigation */}
-          <nav className="flex items-center space-x-12">
-            <Link href="/" className="text-2xl hover:text-gray-900">
-              Home
-            </Link>
-            <Link href="/about" className="text-2xl hover:text-gray-900">
-              About Us
-            </Link>
-            <Link href="/shop" className="text-2xl hover:text-gray-900">
-              Shop
-            </Link>
-          </nav>
-          {/* Logo */}
-          <Link href="/" className="flex justify-center">
-            <div className="relative w-48 h-16">
-              <Image
-                src="/logo/image.png"
-                alt="Logo"
-                layout="intrinsic"
-                width={200}
-                height={70}
-                className="object-contain"
-              />
-            </div>
-          </Link>
-          {/* Right Navigation */}
-          <nav className="flex items-center space-x-12">
-            <Link href="/collections" className="text-2xl hover:text-gray-900">
-              Collections
-            </Link>
-            <Link href="/contact" className="text-2xl hover:text-gray-900">
-              Contact Us
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <header className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">
+  <div className="w-full flex flex-wrap p-3 flex-col md:flex-row items-center justify-end font-bloverly" style={{ backgroundColor: "#4a0600" }}>
+  <div className="flex space-x-6 pr-10">
+      {/* Profile Icon */}
+      <button aria-label="Profile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Head */}
+          <circle cx="12" cy="8" r="3" />
+          {/* Shoulders */}
+          <path d="M6 20c0-3 3-5 6-5s6 2 6 5" />
+        </svg>
+      </button>
+
+      {/* Search Icon */}
+      <button aria-label="Search">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Circle lens */}
+          <circle cx="11" cy="11" r="7" />
+          {/* Handle */}
+          <line x1="16.5" y1="16.5" x2="20" y2="20" />
+        </svg>
+      </button>
+
+      {/* Bag Icon */}
+      <button aria-label="Cart/Bag">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Bag Body */}
+          <path d="M6 7h12v12H6z" />
+          {/* Handle */}
+          <path d="M9 7a3 3 0 0 1 6 0" />
+        </svg>
+      </button>
+    </div>
+</div>
+
+<div className="container mx-auto flex items-center justify-between bg-white p-3 font-bloverly">
+  {/* Left Navigation */}
+  <nav className="flex items-center space-x-12">
+    <Link href="/" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Home</Link>
+    <Link href="/about" className="hover:text-gray-900 font-cormorant font-bold text-2xl">About Us</Link>
+    <Link href="/shop" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Shop</Link>
+  </nav>
+
+  {/* Logo (Centered) */}
+  <Link href="/" className="flex justify-center">
+    <div className="relative w-48 h-16">
+      <Image 
+        src="/logo/image.png"
+        alt="Logo"
+        layout="intrinsic"
+        width={200}
+        height={70}
+        className="object-contain"
+      />
+    </div>
+  </Link>
+
+  {/* Right Navigation */}
+  <nav className="flex items-center space-x-12">
+    <Link href="/collections" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Collections</Link>
+    <Link href="/contact" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Contact Us</Link>
+  </nav>
+</div>
+</header>
 
       {/* Main Content */}
       <main className="flex-grow">
@@ -129,37 +175,39 @@ export default function About() {
                     Contact Information
                   </h3>
                   <h1 className="text-4xl font-bold font-cormorant">Get in touch</h1>
-                  <p className="mt-3 text-xl font-semibold font-cormorant text-gray-700">
+                  {/* <p className="mt-3 text-xl font-semibold font-cormorant text-gray-700">
                     B-3, Spring Valley, Spring Lane, Green Avenue, <br />
                     Vasant Kunj, New Delhi -110070
-                  </p>
+                  </p> */}
                 </div>
                 <div className="mb-6 font-cormorant text-xl font-semibold">
-                  <p className="mt-2">
-                    <span className="mr-2">Phone Number:</span>
-                    +91 9899900486
-                  </p>
-                  <p className="mt-2">
+                <p className="mt-2 text-xl italic text-black-300 font-cormorant">
                     <span className="mr-2">Email:</span>
                     contact@Srimaya.in
+                  </p>
+                  <p className="mt-2 text-xl italic text-black-300 font-cormorant">
+                    <span className="mr-2">Phone Number:</span>
+                    +91 9899900486
                   </p>
                 </div>
                 <hr className="my-6 border-gray-500" />
                 <div className="font-cormorant">
-                  <div className="relative flex justify-center items-center w-65 h-30 mx-auto pr-2">
+                  <div className="relative flex justify-center items-center w-60 h-30 mx-auto pr-2 pb-2">
                     <Image
                       src="/logo/image.png"
                       alt="Logo"
                       layout="intrinsic"
-                      width={300}
-                      height={90}
+                      width={180}
+                      height={40}
                       className="object-contain"
                     />
                   </div>
-                  <p className="text-3xl italic text-gray-700 font-snell font-semibold">
+                    <p className="text-3xl text-gray-700 font-snell font-semibold text-center">
                     For the divine feminine in you....
-                  </p>
-                  <p className="mt-3 text-xl italic text-black-300 font-cormorant">
+                    </p>
+                    <br/>
+
+                  <p className="mt-3 text-xl text-black-300 font-cormorant">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perferendis exercitationem, voluptatem tempore nulla quam quos
                     ex quia, optio harum doloribus est fugit ab. Ducimus dolorem
@@ -176,7 +224,7 @@ export default function About() {
 
               {/* Contact Form */}
               <div className="bg-[#4a0600] text-white p-8 rounded-lg shadow-lg font-cormorant">
-                <h3 className="mb-2 text-sm uppercase tracking-wide text-gray-400 font-semibold">
+                <h3 className="mb-2 text-sm uppercase tracking-wide text-white font-semibold">
                   Contact Form
                 </h3>
                 <h2 className="mb-6 text-3xl font-semibold">
@@ -184,7 +232,7 @@ export default function About() {
                 </h2>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-4">
-                    <label className="block mb-1 text-sm text-gray-400">
+                    <label className="block mb-1 text-xl text-sm text-white">
                       Name
                     </label>
                     <input
@@ -192,11 +240,11 @@ export default function About() {
                       placeholder="Your Name"
                       value={Name}
                       onChange={(e) => setName(e.target.value)}
-                      className="w-full p-3 text-black border border-gray-300 rounded"
+                      className="w-full p-3 text-black border border-black rounded"
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block mb-1 text-sm text-gray-400">
+                    <label className="block mb-1 text-xl text-sm text-white">
                       Email
                     </label>
                     <input
@@ -204,11 +252,11 @@ export default function About() {
                       placeholder="Your Email"
                       value={Email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full p-3 text-black border border-gray-300 rounded"
+                      className="w-full p-3 text-black border border-black rounded"
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block mb-1 text-sm text-gray-400">
+                    <label className="block mb-1 text-xl text-sm text-white">
                       Phone
                     </label>
                     <input
@@ -216,27 +264,31 @@ export default function About() {
                       placeholder="Your Phone Number"
                       value={PhoneNumber}
                       onChange={(e) => setPhone(e.target.value)}
-                      className="w-full p-3 text-black border border-gray-300 rounded"
+                      className="w-full p-3 text-black border border-black rounded"
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block mb-1 text-sm text-gray-400">
-                      Reason
+                    <label className="block mb-1 text-xl text-sm text-white">
+                      Enquire
                     </label>
                     <input
                       type="text"
-                      placeholder="Reason for enquiry"
+                      placeholder="Mention your query in a few words"
                       value={Reason}
                       onChange={(e) => setReason(e.target.value)}
-                      className="w-full p-3 text-black border border-gray-300 rounded"
+                      className="w-full p-3 text-black border border-black rounded"
                     />
                   </div>
                   <button
                     type="submit"
                     onClick={() => console.log("Button clicked!")}
-                    className="w-full py-3 text-lg font-semibold rounded-md bg-[#c1ab8f] text-black transition hover:bg-[#b49a7e]"
-                  >
+                    className="w-full py-3 text-lg font-cormorant font-semibold rounded-md bg-[#c1ab8f] text-black transition hover:bg-[#b49a7e]">
                     Submit
+                  </button>
+                  <br/>
+                  <br/>
+                  <button className="w-full py-3 text-lg font-cormorant font-semibold rounded-md bg-[#c1ab8f] text-black transition hover:bg-[#b49a7e]">
+                    Create an account
                   </button>
                 </form>
               </div>
@@ -327,13 +379,13 @@ export default function About() {
                 href="https://twitter.com/knyttneve"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="ml-1 text-gray-400"
+                className="ml-1 text-white"
               >
                 @darkmodesolutions
               </a>
             </p>
             <span className="inline-flex space-x-4">
-              <a className="transition hover:text-white text-gray-400">
+              <a className="transition hover:text-white text-white">
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -345,7 +397,7 @@ export default function About() {
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                 </svg>
               </a>
-              <a className="transition hover:text-white text-gray-400">
+              <a className="transition hover:text-white text-white">
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"
@@ -357,7 +409,7 @@ export default function About() {
                   <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
                 </svg>
               </a>
-              <a className="transition hover:text-white text-gray-400">
+              <a className="transition hover:text-white text-white">
                 <svg
                   className="w-5 h-5"
                   fill="none"
@@ -371,7 +423,7 @@ export default function About() {
                   <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
                 </svg>
               </a>
-              <a className="transition hover:text-white text-gray-400">
+              <a className="transition hover:text-white text-white">
                 <svg
                   className="w-5 h-5"
                   fill="currentColor"

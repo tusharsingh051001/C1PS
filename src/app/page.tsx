@@ -44,15 +44,72 @@ export default function Home() {
 <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 bg-white font-[family-name:var(--font-geist-sans)]">
 <header className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">
   <div className="w-full flex flex-wrap p-3 flex-col md:flex-row items-center justify-end font-bloverly" style={{ backgroundColor: "#4a0600" }}>
-  <Link href="/login" className="hover:text-gray-900 text-2xl">Home</Link>
+  <div className="flex space-x-6 pr-10">
+      {/* Profile Icon */}
+      <button aria-label="Profile">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Head */}
+          <circle cx="12" cy="8" r="3" />
+          {/* Shoulders */}
+          <path d="M6 20c0-3 3-5 6-5s6 2 6 5" />
+        </svg>
+      </button>
+
+      {/* Search Icon */}
+      <button aria-label="Search">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Circle lens */}
+          <circle cx="11" cy="11" r="7" />
+          {/* Handle */}
+          <line x1="16.5" y1="16.5" x2="20" y2="20" />
+        </svg>
+      </button>
+
+      {/* Bag Icon */}
+      <button aria-label="Cart/Bag">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-6 h-6 text-white"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={2}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {/* Bag Body */}
+          <path d="M6 7h12v12H6z" />
+          {/* Handle */}
+          <path d="M9 7a3 3 0 0 1 6 0" />
+        </svg>
+      </button>
+    </div>
 </div>
 
 <div className="container mx-auto flex items-center justify-between bg-white p-3 font-bloverly">
   {/* Left Navigation */}
   <nav className="flex items-center space-x-12">
-    <Link href="/" className="hover:text-gray-900 text-2xl">Home</Link>
-    <Link href="/about" className="hover:text-gray-900 text-2xl">About Us</Link>
-    <Link href="/shop" className="hover:text-gray-900 text-2xl">Shop</Link>
+    <Link href="/" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Home</Link>
+    <Link href="/about" className="hover:text-gray-900 font-cormorant font-bold text-2xl">About Us</Link>
+    <Link href="/shop" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Shop</Link>
   </nav>
 
   {/* Logo (Centered) */}
@@ -71,15 +128,15 @@ export default function Home() {
 
   {/* Right Navigation */}
   <nav className="flex items-center space-x-12">
-    <Link href="/collections" className="hover:text-gray-900 text-2xl">Collections</Link>
-    <Link href="/contact" className="hover:text-gray-900 text-2xl">Contact Us</Link>
+    <Link href="/collections" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Collections</Link>
+    <Link href="/contact" className="hover:text-gray-900 font-cormorant font-bold text-2xl">Contact Us</Link>
   </nav>
 </div>
 </header>
 
 <section className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">
 <div className="w-full flex items-center justify-center bg-white">
-  <div className="relative w-full h-[850px] bg-white flex items-center justify-center shadow-lg overflow-hidden">
+  <div className="relative w-full h-[950px] bg-white flex items-center justify-center shadow-lg overflow-hidden">
     {slides.map((slide, index) => (
       <Image
         key={index}
