@@ -1,45 +1,9 @@
 "use client";
 
-import { useState, useEffect, useCallback} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import "swiper/css";
-import "swiper/css/navigation";
-
 
 export default function Home() {
-
-  const images = [
-    "/images/slide1.jpg",
-    "/images/slide2.jpg",
-    "/images/slide3.jpg",
-    "/images/slide4.jpg",
-  ];
-  
-  const slides = [
-    "/slides/slide1.jpeg",
-    "/slides/slide2.jpeg",
-    "/slides/slide3.jpeg",
-    "/slides/slide4.jpeg",
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const nextSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
-  }, [images.length]);
-
-  const prevSlide = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  }, [images.length]);
-
-  useEffect(() => {
-    const interval = setInterval(nextSlide, 5000);
-    return () => clearInterval(interval);
-  }, [nextSlide]);
-
-
-
   return (
 <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 bg-white font-[family-name:var(--font-geist-sans)]">
 <header className="text-gray-600 body-font w-full flex flex-wrap flex-col md:flex-row items-center">

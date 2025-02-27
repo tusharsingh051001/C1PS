@@ -1,126 +1,125 @@
 "use client";
 
-import { useEffect, useState, ChangeEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-interface Product {
-  id: number;
-  Name: string;
-  Description: string;
-  Price: number;
-  Collection: string | null;
-  Images: {
-    id: number;
-    name: string;
-    url: string;
-    // etc...
-  }[];
-}
+// interface Product {
+//   id: number;
+//   Name: string;
+//   Description: string;
+//   Price: number;
+//   Collection: string | null;
+//   Images: {
+//     id: number;
+//     name: string;
+//     url: string;
+//     // etc...
+//   }[];
+// }
 export default function ProductsPage() {
-  const [products, setProducts] = useState<Product[]>([]);
-  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+//   const [products, setProducts] = useState<Product[]>([]);
+//   const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+//   const [loading, setLoading] = useState(false);
+//   const [error, setError] = useState<string | null>(null);
 
-  // Filter & Sorting
-  const [selectedCollection, setSelectedCollection] = useState("All Products");
-  const [sortOption, setSortOption] = useState("Featured");
+//   // Filter & Sorting
+//   const [selectedCollection, setSelectedCollection] = useState("All Products");
+//   const [sortOption, setSortOption] = useState("Featured");
 
-  // Pagination
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6; // fixed items per page for a minimal layout
+//   // Pagination
+//   const [currentPage, setCurrentPage] = useState(1);
+//   const itemsPerPage = 6; // fixed items per page for a minimal layout
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const res = await fetch("http://localhost:1337/api/products");
-        if (!res.ok) {
-          throw new Error("Failed to fetch products");
-        }
-        const json = await res.json();
-        // 'data' is your array of products
-        setProducts(json.data); 
-      } catch (err) {
-        if (err instanceof Error) {
-          setError(err.message);
-        } else {
-          setError("An unknown error occurred");
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchProducts();
-  }, []);
+//   useEffect(() => {
+//     const fetchProducts = async () => {
+//       setLoading(true);
+//       setError(null);
+//       try {
+//         const res = await fetch("http://localhost:1337/api/products");
+//         if (!res.ok) {
+//           throw new Error("Failed to fetch products");
+//         }
+//         const json = await res.json();
+//         // 'data' is your array of products
+//         setProducts(json.data); 
+//       } catch (err) {
+//         if (err instanceof Error) {
+//           setError(err.message);
+//         } else {
+//           setError("An unknown error occurred");
+//         }
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+//     fetchProducts();
+//   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error}</p>;
-  // Compute unique Collections for the filter dropdown
-  const allCollections = [
-    "All Products",
-    ...new Set(
-      products
-        .map((p) => p.Collection)
-        .filter((collection) => collection !== undefined)
-    ),
-  ];
-  // Filter & sort whenever products or filter/sort states change
-  useEffect(() => {
-    let temp = [...products];
+//   if (loading) return <p>Loading...</p>;
+//   if (error) return <p>Error: {error}</p>;
+//   // Compute unique Collections for the filter dropdown
+//   const allCollections = [
+//     "All Products",
+//     ...new Set(
+//       products
+//         .map((p) => p.Collection)
+//         .filter((collection) => collection !== undefined)
+//     ),
+//   ];
+//   // Filter & sort whenever products or filter/sort states change
+//   useEffect(() => {
+//     let temp = [...products];
 
-    // Filter by Collection
-    if (selectedCollection !== "All Products") {
-      temp = temp.filter(
-        (prod) => prod.Collection === selectedCollection
-      );
-    }
+//     // Filter by Collection
+//     if (selectedCollection !== "All Products") {
+//       temp = temp.filter(
+//         (prod) => prod.Collection === selectedCollection
+//       );
+//     }
 
-    // Sort
-    switch (sortOption) {
-      case "Price: Low to High":
-        temp.sort((a, b) => a.Price - b.Price);
-        break;
-      case "Price: High to Low":
-        temp.sort((a, b) => b.Price - a.Price);
-        break;
-      case "Name A-Z":
-        temp.sort((a, b) =>
-          a.Name.localeCompare(b.Name)
-        );
-        break;
-      case "Name Z-A":
-        temp.sort((a, b) =>
-          b.Name.localeCompare(a.Name)
-        );
-        break;
-      default:
-        break;
-    }
+//     // Sort
+//     switch (sortOption) {
+//       case "Price: Low to High":
+//         temp.sort((a, b) => a.Price - b.Price);
+//         break;
+//       case "Price: High to Low":
+//         temp.sort((a, b) => b.Price - a.Price);
+//         break;
+//       case "Name A-Z":
+//         temp.sort((a, b) =>
+//           a.Name.localeCompare(b.Name)
+//         );
+//         break;
+//       case "Name Z-A":
+//         temp.sort((a, b) =>
+//           b.Name.localeCompare(a.Name)
+//         );
+//         break;
+//       default:
+//         break;
+//     }
 
-    setFilteredProducts(temp);
-    setCurrentPage(1); 
-  }, [products, selectedCollection, sortOption]);
+//     setFilteredProducts(temp);
+//     setCurrentPage(1); 
+//   }, [products, selectedCollection, sortOption]);
 
-  const totalItems = filteredProducts.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const currentPageProducts = filteredProducts.slice(startIndex, endIndex);
+//   const totalItems = filteredProducts.length;
+//   const totalPages = Math.ceil(totalItems / itemsPerPage);
+//   const startIndex = (currentPage - 1) * itemsPerPage;
+//   const endIndex = startIndex + itemsPerPage;
+//   const currentPageProducts = filteredProducts.slice(startIndex, endIndex);
 
-  const handleCollectionChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedCollection(e.target.value);
-  };
+//   const handleCollectionChange = (e: ChangeEvent<HTMLSelectElement>) => {
+//     setSelectedCollection(e.target.value);
+//   };
 
-  const handleSortChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setSortOption(e.target.value);
-  };
+//   const handleSortChange = (e: ChangeEvent<HTMLSelectElement>) => {
+//     setSortOption(e.target.value);
+//   };
 
-  const handlePageChange = (page: number) => {
-    setCurrentPage(page);
-  };
+//   const handlePageChange = (page: number) => {
+//     setCurrentPage(page);
+//   };
 
   return (
 <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen gap-16 sm:pt-14 bg-white font-[family-Name:var(--font-geist-sans)]">
@@ -215,146 +214,6 @@ export default function ProductsPage() {
   </nav>
 </div>
 </header>
-
-
-
-<div className="min-h-screen w-full bg-white text-gray-800">
-      {/* Top Bar */}
-      <header className="flex items-center justify-between px-8 py-4 border-b">
-        {/* Left: Title */}
-        <h1 className="text-xl font-semibold">All Products</h1>
-      </header>
-      {/* Main Container */}
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        {error && (
-          <p className="text-red-500 text-center my-4">{error}</p>
-        )}
-        {loading && (
-          <p className="text-gray-500 text-center my-4">Loading products...</p>
-        )}
-
-        {/* Filter & Sort Row */}
-        <div className="flex flex-col md:flex-row items-center justify-between mb-8 space-y-4 md:space-y-0">
-          {/* Left: Filter by Collection */}
-          <div className="flex items-center space-x-2">
-            <label className="font-medium">Filter:</label>
-            <select
-              value={selectedCollection}
-              onChange={handleCollectionChange}
-              className="border p-2 rounded text-sm"
-            >
-              {allCollections.map((Collection) => (
-                <option key={Collection} value={Collection}>
-                  {Collection}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          {/* Right: Sort Dropdown */}
-          <div className="flex items-center space-x-2">
-            <label className="font-medium">Sort By:</label>
-            <select
-              value={sortOption}
-              onChange={handleSortChange}
-              className="border p-2 rounded text-sm"
-            >
-              <option value="Featured">Featured</option>
-              <option value="Price: Low to High">Price: Low to High</option>
-              <option value="Price: High to Low">Price: High to Low</option>
-              <option value="Name A-Z">Name A-Z</option>
-              <option value="Name Z-A">Name Z-A</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6">
-      {products.map((prod) => {
-        const { id, Name, Price, Collection, Images } = prod;
-
-        // For simplicity, show only the first image
-        const firstImage = Images?.[0]?.url || "";
-
-        return (
-          <div key={id} className="border p-4 rounded">
-            {firstImage && (
-              <div className="relative w-full h-64 mb-4">
-                <Image
-                  src={firstImage}
-                  alt={Name}
-                  fill
-                  className="object-cover rounded"
-                />
-              </div>
-            )}
-            <h2 className="text-lg font-semibold">{Name}</h2>
-            <p className="text-sm text-gray-600">
-              Collection: {Collection || "None"}
-            </p>
-            <p className="text-md font-medium">Price: ₹ {Price}</p>
-          </div>
-        );
-      })}
-    </div>
-
-        {/* Pagination */}
-        {!loading && filteredProducts.length > 0 && (
-          <div className="mt-10 flex flex-col items-center">
-            <div className="mb-4 text-sm">
-              Page {currentPage} of {totalPages}
-            </div>
-            <div className="flex space-x-2">
-              {/* Prev Button */}
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className={`px-3 py-1 border rounded ${
-                  currentPage === 1
-                    ? "cursor-not-allowed bg-gray-100 text-gray-400"
-                    : "hover:bg-gray-200"
-                }`}
-              >
-                Prev
-              </button>
-
-              {/* Page Numbers */}
-              {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
-                <button
-                  key={page}
-                  onClick={() => handlePageChange(page)}
-                  className={`px-3 py-1 border rounded ${
-                    page === currentPage
-                      ? "bg-gray-900 text-white"
-                      : "hover:bg-gray-200"
-                  }`}
-                >
-                  {page}
-                </button>
-              ))}
-
-              {/* Next Button */}
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className={`px-3 py-1 border rounded ${
-                  currentPage === totalPages
-                    ? "cursor-not-allowed bg-gray-100 text-gray-400"
-                    : "hover:bg-gray-200"
-                }`}
-              >
-                Next
-              </button>
-            </div>
-          </div>
-        )}
-      </main>
-    </div>
-
-
-
-
-
 
 <br></br>
 
